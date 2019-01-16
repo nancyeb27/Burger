@@ -50,7 +50,7 @@ var orm = {
       cb(result);
     });
   },
-  create: function(table, cols, vals, cb) {
+  insertOne: function(table, cols, vals, cb) {
     var queryString = "INSERT INTO " + table;
 
     queryString += " (";
@@ -71,7 +71,11 @@ var orm = {
     });
   },
   // An example of objColVals would be {name: panther, sleepy: true}
-  update: function(table, objColVals, condition, cb) {
+  updateOne: function(table, objColVals, condition, cb) {
+    console.log("table", table);
+    console.log("condition", condition);
+    console.log("objColVals", objColVals);
+    
     var queryString = "UPDATE " + table;
 
     queryString += " SET ";
@@ -79,7 +83,7 @@ var orm = {
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
+    console.log("Query String", queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

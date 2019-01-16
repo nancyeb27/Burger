@@ -21,7 +21,7 @@ h1 {
 
 span {
 	font-size: 0.85em;
-	background: #B31B1B;
+	background: rgb(20, 17, 17);
 	color: white;
 	padding: 3px 5px 3px 5px;
 	border-radius: 4px;
@@ -43,7 +43,7 @@ button {
 #burgers-available {
 	flex-grow: 1;
 	padding: 0.5em 2em 1.7em 2em;
-	background: #71BC78;
+	background: rgb(223, 70, 82);
 	margin: 1em 1em 1em 0;
 }
 
