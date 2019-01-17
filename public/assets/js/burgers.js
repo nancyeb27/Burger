@@ -8,8 +8,7 @@ $(function () {
     console.log("this . id", this.id);
 
     var newState = {
-      "id": id,
-      "devoured": true
+      "id": id      
 
     };
     // Send the PUT request.
@@ -25,13 +24,13 @@ $(function () {
     );
   });
 
-  $("#submit-btn").on("submit", function (event) {
+  $("#submit-btn").on("click", function (event) {
     // Make sure to preventDefault on a submit event.
     event.preventDefault();
     
     var newBurger = {
-        name: $("#burger-name").val().trim(),
-        devoured: false
+        burger_name: $("#burger-name").val().trim(),
+        
       };
 
       // Send the POST request.
